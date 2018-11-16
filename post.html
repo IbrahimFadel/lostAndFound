@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Lost and Found</title>
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/index.css" rel="stylesheet">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="/">Lost & Found</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/loginSignup.html">Login/Signup</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<h1 class="header">Fill out this form to post your lost item</h1>
+
+<div class="formContainer" id="postForm">
+  <form>
+    <div class="form-group">
+      <label for="exampleInputEmail1">Title</label>
+      <input type="text" class="form-control" placeholder="Title...">
+      
+    </div>
+    <div class="form-group">
+      <label>Description</label>
+      <input type="text" class="form-control" name="password" placeholder="Short Description...">
+    </div>
+
+    <div class="form-group">
+      <label>Upload image(if available)</label>
+      <input type="file" name="image-input" id="image">
+    </div>
+
+      <button type="button" value="Log In" class="btn btn-primary" onclick="post()">Post</button>
+  </form>
+</div>
+
+
+
+
+<script src="https://www.gstatic.com/firebasejs/5.5.8/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyB57pf0go2Ww2NOziEylRhm9RmnvPQaQew",
+    authDomain: "lostandfound-f0d33.firebaseapp.com",
+    databaseURL: "https://lostandfound-f0d33.firebaseio.com",
+    projectId: "lostandfound-f0d33",
+    storageBucket: "lostandfound-f0d33.appspot.com",
+    messagingSenderId: "816045272820"
+  };
+  firebase.initializeApp(config);
+</script>
+<script src="firebase.js"></script>
+</body>
+</html>
